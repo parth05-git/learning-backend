@@ -1,7 +1,8 @@
+import dotenv from "dotenv/config";
 import express from 'express';
 
 const app = express(); //we import express as a function
-const port = 3000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json())
 //Express server needs to receive and read JSON data sent in the request body (such as from POST, PUT, or PATCH requests).
